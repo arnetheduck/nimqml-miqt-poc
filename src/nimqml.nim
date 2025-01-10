@@ -11,8 +11,7 @@ template debugMsg(message: string) =
   echo "NimQml: ", message
 
 template debugMsg(typeName: string, procName: string) =
-  when defined(debug):
-    debugMsg(typeName & ": " & procName)
+  debugMsg(typeName & ": " & procName)
 
 include "nimqml/private/nimqmlmacros.nim"
 include "nimqml/private/dotherside.nim"
